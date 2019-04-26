@@ -2,11 +2,11 @@
 
 ssh "$*" /opt/etc/toggle_proxy.sh disable
 
-self="$(curl -sS https://raw.githubusercontent.com/zw963/deployment_bash/v0.4.6/deploy_start.sh)" && eval "$self"
+self="$(curl -sS https://raw.githubusercontent.com/zw963/deployment_bash/v0.4.8/deploy_start.sh)" && eval "$self"
 
 # self="$(cat ~/Project/deployment_bash/deploy_start.sh)" && eval "$self"
 
-export target=$1
+export_variable target=$1
 
 if [ ! -e ./router/opt/etc/shadowsocks.json ];then
     echo '请首先定义 router/opt/etc/shadowsocks.json'
